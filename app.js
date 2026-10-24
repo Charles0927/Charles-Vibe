@@ -247,7 +247,7 @@
       collectionCount.textContent = content.labels[content.lang].collectionCount.replace('{count}', currentPhotos.length);
       grid.innerHTML = currentPhotos.map((photo, index) => `
         <button class="gallery-card" type="button" data-index="${index}" aria-label="${localized(photo.title)}">
-          <span class="card-image"><img src="${photo.src}" alt="${localized(photo.alt)}" loading="lazy" /></span>
+          <span class="card-image"><img src="${photo.src}" alt="${localized(photo.alt)}" loading="lazy" decoding="async" /></span>
           <span class="card-caption"><strong>${localized(photo.title)}</strong><small>${photo.meta}</small></span>
         </button>`).join('');
       grid.querySelectorAll('.gallery-card').forEach((card, index) => {
@@ -379,3 +379,4 @@
   menuToggle.addEventListener('click', () => document.body.classList.toggle('nav-open'));
   document.querySelectorAll('.main-nav a').forEach((link) => link.addEventListener('click', () => document.body.classList.remove('nav-open')));
 })();
+

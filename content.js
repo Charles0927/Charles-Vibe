@@ -100,10 +100,11 @@ window.siteContent.collections.forEach((collection) => {
     const [titleEnLocalized, titleZhLocalized, titleJa, titleKo] = translatedPhotoTitles[file];
     const [altEnLocalized, altZhLocalized, altJa, altKo] = translatedPhotoAlts[file] || [altEn, titleZhLocalized, titleJa, titleKo];
     return {
-    src: `assets/collections/${collection.id}/${file}`,
+    src: `assets/optimized/${collection.id}/${file}`,
     alt: { en: altEnLocalized, zh: altZhLocalized, ja: altJa, ko: altKo },
     title: { en: titleEnLocalized, zh: titleZhLocalized, ja: titleJa, ko: titleKo },
     meta: `${collection.code} · ${String(index + 1).padStart(2, '0')}`
     };
   });
 });
+

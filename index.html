@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111416" />
+    <meta name="description" content="Charles'Vibe — photographs from Hong Kong and Kota Kinabalu." />
+    <title>Charles'Vibe — Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <a class="brand" href="#top">CHARLES<span>’</span>VIBE</a>
+      <nav class="main-nav" aria-label="Primary navigation" data-label-aria="navLabel">
+        <a href="#work" data-label="navWork">Work</a>
+        <a href="#about" data-label="navAbout">About</a>
+        <a href="#contact" data-label="navContact">Contact</a>
+      </nav>
+      <div class="header-tools">
+        <label class="language-control"><span class="visually-hidden" data-label="languageLabel">Language</span><select class="language-toggle" aria-label="Language"><option value="en">EN</option><option value="zh">中文</option><option value="ja">日本語</option><option value="ko">한국어</option></select></label>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" data-label-aria="menuLabel"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-label="heroEyebrow">Film photographs · Hong Kong / Sabah</p>
+          <h1 id="hero-title" data-label="heroTitle">Hong Kong<br />and Kota Kinabalu</h1>
+          <p class="hero-note" data-label="heroNote">35mm. Places, as I remember them.</p>
+          <a class="text-link" href="#work"><span data-label="viewWork">View photographs</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <figure class="hero-frame">
+          <div class="hero-image photo-frame">
+            <img src="assets/collections/kota-kinabalu/kota-(22).jpg" alt="" fetchpriority="high" />
+          </div>
+          <figcaption class="hero-caption"><span class="hero-caption-title">Kota Kinabalu</span><span class="hero-caption-count">01 / 22</span></figcaption>
+          <button class="hero-shuffle" type="button" aria-label="Show another photograph" data-label-aria="shuffleAria"><span data-label="shuffleFrame">Another frame</span><span aria-hidden="true">↗</span></button>
+        </figure>
+        <div class="hero-index" aria-hidden="true">01 — 22</div>
+      </section>
+
+      <section class="film-display section-pad" id="film-display" data-stock="gold200" aria-label="Film selector" data-label-aria="filmAria">
+        <div class="film-display-heading">
+          <div>
+            <p class="eyebrow" data-label="filmEyebrow">A roll between frames</p>
+            <p class="film-hint" data-label="filmHint">Click once to change stock. Double-click to unroll.</p>
+          </div>
+          <span class="film-stock-count" id="film-stock-count">01 / 03</span>
+        </div>
+        <div class="film-mechanism" id="film-mechanism">
+          <div class="film-ribbon-stage" id="film-unroll" aria-hidden="true">
+            <svg class="film-ribbon" viewBox="0 0 1800 190" preserveAspectRatio="none" role="img" aria-label="A straight strip of dark brown 35mm color-negative film">
+              <defs>
+                <linearGradient id="negative-tone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#542c1c"/><stop offset=".16" stop-color="#75442b"/><stop offset=".5" stop-color="#8a5535"/><stop offset=".84" stop-color="#70412b"/><stop offset="1" stop-color="#4b281b"/></linearGradient>
+                <linearGradient id="negative-frame" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a3693e"/><stop offset=".5" stop-color="#895333"/><stop offset="1" stop-color="#71432c"/></linearGradient>
+                <pattern id="sprocket-holes" width="36" height="190" patternUnits="userSpaceOnUse"><rect x="8" y="6" width="18" height="17" rx="2" fill="#d8b79a"/><rect x="8" y="167" width="18" height="17" rx="2" fill="#d8b79a"/></pattern>
+                <clipPath id="negative-shape"><path d="M88 4 H1766 Q1796 4 1796 34 V156 Q1796 186 1766 186 H34 Q4 186 4 156 V64 C4 52 8 43 20 35 C34 26 50 15 64 9 C72 5 78 4 88 4 Z"/></clipPath>
+              </defs>
+              <g class="ribbon-art" clip-path="url(#negative-shape)">
+                <rect class="negative-base" x="0" y="0" width="1800" height="190"/>
+                <rect class="negative-frames" x="0" y="0" width="1800" height="190" fill="url(#sprocket-holes)"/>
+                <g class="frame-windows"><rect x="110" y="31" width="165" height="128"/><rect x="320" y="31" width="165" height="128"/><rect x="530" y="31" width="165" height="128"/><rect x="740" y="31" width="165" height="128"/><rect x="950" y="31" width="165" height="128"/><rect x="1160" y="31" width="165" height="128"/><rect x="1370" y="31" width="165" height="128"/><rect x="1580" y="31" width="165" height="128"/></g>
+                <g class="film-watermarks"><text class="watermark-one" x="402" y="99">CHARLES’VIBE</text><text class="watermark-two" x="1032" y="99">CHARLES’VIBE</text><text class="watermark-three" x="1662" y="99">CHARLES’VIBE</text></g>
+              </g>
+            </svg>
+          </div>
+          <button class="film-cartridge" id="film-control" type="button" aria-expanded="false" aria-label="Change film stock or double-click to unroll">
+            <img class="canister-photo" src="assets/kodak-canister-isolated.png" alt="" draggable="false" />
+            <span class="canister-stock-label"><span class="cartridge-brand" id="cartridge-brand">KODAK</span><strong id="cartridge-stock">GOLD 200</strong><small id="cartridge-detail">COLOR · 200</small><span class="cartridge-exp" id="cartridge-exp">36 EXP</span></span>
+          </button>
+          <span class="visually-hidden" id="film-status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section class="work-section section-pad" id="work" aria-label="Selected photographs" data-label-aria="workAria">
+        <div class="work-heading">
+          <div><p class="eyebrow" data-label="workEyebrow">Selected work</p><h2 data-label="workTitle">Photographs</h2></div>
+          <p class="work-total" data-label="selectedCount">22 photographs</p>
+        </div>
+        <div class="collection-tabs" role="tablist" aria-label="Photo collections" data-label-aria="collectionAria">
+          <button class="collection-tab is-active" type="button" role="tab" aria-selected="true" data-collection="hong-kong"><span data-label="hongKong">Hong Kong</span><span class="tab-count">11</span></button>
+          <button class="collection-tab" type="button" role="tab" aria-selected="false" data-collection="kota-kinabalu"><span data-label="kotaKinabalu">Kota Kinabalu</span><span class="tab-count">11</span></button>
+        </div>
+        <div class="collection-heading"><span id="collection-code">HK</span><h3 id="collection-title">Hong Kong</h3><span id="collection-count">11 photographs</span></div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </section>
+
+      <section class="about-section section-pad" id="about">
+        <p class="eyebrow" data-label="aboutEyebrow">About</p>
+        <div class="about-grid"><div class="about-identity"><h2>Charles</h2><p class="about-location" data-label="aboutLocation">Based in mainland China</p></div><div class="about-copy"><p data-label="aboutCopy">Hong Kong, in passing. Kota Kinabalu, in salt air. A small archive of places and the time spent in them.</p><p class="about-role" data-label="aboutTitle">Photographer</p></div></div>
+      </section>
+
+      <section class="contact-section section-pad" id="contact">
+        <div class="contact-heading"><p class="eyebrow" data-label="contactLabel">Contact / Collaboration</p><h2 data-label="contactTitle">Have a project<br />in mind?</h2><p data-label="contactIntro">For assignments, print inquiries, or a good idea — get in touch.</p></div>
+        <div class="contact-cards">
+          <a class="contact-card" href="assets/contact/wechat-qr.png" target="_blank" rel="noreferrer" aria-label="Open WeChat QR code" data-label-aria="wechatAria">
+            <span class="contact-card-head"><strong>WeChat</strong><span data-label="wechatHint">Scan to add me</span></span>
+            <img src="assets/contact/wechat-qr.png" alt="WeChat friend QR code for Charles" />
+            <span class="contact-card-foot">CHARLES · WECHAT</span>
+          </a>
+          <a class="contact-card" href="assets/contact/rednote-qr.png" target="_blank" rel="noreferrer" aria-label="Open RedNote QR code" data-label-aria="rednoteAria">
+            <span class="contact-card-head"><strong>RedNote</strong><span data-label="rednoteHint">ID · 7424630760</span></span>
+            <img src="assets/contact/rednote-qr.png" alt="RedNote profile QR code for Charles" />
+            <span class="contact-card-foot">CHARLES · REDNOTE</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-pad"><span>© 2026 Charles’Vibe</span><a href="#top" data-label="backTop">Back to top ↑</a></footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" type="button" aria-label="Close image viewer" data-label-aria="closeAria">×</button><button class="lightbox-prev" type="button" aria-label="Previous image" data-label-aria="previousAria">←</button><div class="lightbox-content"><img src="assets/collections/hong-kong/hk1-000021.jpg" alt="" /><div class="lightbox-caption"><span class="lightbox-count"></span><span class="lightbox-title"></span></div></div><button class="lightbox-next" type="button" aria-label="Next image" data-label-aria="nextAria">→</button></div>
+    <script src="content.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#14191d" />
+    <title>Charles’Vibe — Studio</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script src="../content.js?v=admin" defer></script>
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="../">CHARLES<span>’</span>VIBE <i>STUDIO</i></a>
+      <div class="topbar-actions">
+        <span id="connection-state" class="connection-state">未连接</span>
+        <button id="sign-out" class="quiet-button" type="button" hidden>退出</button>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="intro">
+        <p class="eyebrow">PRIVATE WORKSPACE · GITHUB</p>
+        <h1>作品管理</h1>
+        <p>替换照片、调整四种语言的标题与说明，保存后自动更新网站。</p>
+      </section>
+
+      <section class="auth-card" id="auth-card">
+        <div>
+          <p class="eyebrow">SECURE CONNECTION</p>
+          <h2>连接你的仓库</h2>
+          <p class="muted">创建一个仅限 Charles-Vibe 仓库、具有 Contents 读写权限的 Fine-grained personal access token。</p>
+        </div>
+        <form id="auth-form" class="auth-form">
+          <label for="github-token">GitHub Token</label>
+          <div class="token-row">
+            <input id="github-token" name="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" required />
+            <button class="primary-button" type="submit">连接</button>
+          </div>
+          <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">创建 Fine-grained token ↗</a>
+          <p class="security-note">Token 只保存在当前页面内存中，仅发送给 api.github.com；关闭或刷新页面后需要重新连接。不要把 Token 发给任何人。</p>
+        </form>
+      </section>
+
+      <section id="editor" hidden>
+        <div class="workspace-bar">
+          <nav class="panel-tabs" aria-label="管理类型">
+            <button class="panel-tab is-active" type="button" data-panel="photos">照片与说明</button>
+            <button class="panel-tab" type="button" data-panel="copy">网站文案</button>
+          </nav>
+          <div class="save-area">
+            <span id="save-state" class="save-state">尚未修改</span>
+            <button id="save-changes" class="primary-button" type="button" disabled>保存并发布</button>
+          </div>
+        </div>
+
+        <section id="photos-panel" class="panel">
+          <div class="collection-tabs" role="tablist" aria-label="照片合集">
+            <button class="collection-tab is-active" type="button" data-collection="hong-kong">Hong Kong</button>
+            <button class="collection-tab" type="button" data-collection="kota-kinabalu">Kota Kinabalu</button>
+          </div>
+          <div class="photo-workspace">
+            <aside class="photo-list" id="photo-list" aria-label="照片列表"></aside>
+            <div class="photo-editor" id="photo-editor"></div>
+          </div>
+        </section>
+
+        <section id="copy-panel" class="panel" hidden>
+          <div class="language-tabs" role="tablist" aria-label="文案语言">
+            <button class="language-tab is-active" type="button" data-language="zh">中文</button>
+            <button class="language-tab" type="button" data-language="en">English</button>
+            <button class="language-tab" type="button" data-language="ja">日本語</button>
+            <button class="language-tab" type="button" data-language="ko">한국어</button>
+          </div>
+          <div class="copy-grid" id="copy-grid"></div>
+        </section>
+        <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <footer class="admin-footer"><a href="../">查看网站 ↗</a><span>Changes publish to the <code>main</code> branch.</span></footer>
+    </main>
+  </body>
+</html>
+

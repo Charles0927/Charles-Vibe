@@ -380,6 +380,7 @@
 
   function setLanguage(language) {
     content.lang = language;
+    mediumBar.querySelector('[data-medium="all"]').textContent = content.labels[language].filterAll || 'All';
     document.documentElement.lang = { en: 'en', zh: 'zh-CN', ja: 'ja', ko: 'ko' }[language];
     document.querySelectorAll('[data-label]').forEach((element) => {
       const key = element.dataset.label;
@@ -451,5 +452,3 @@
   menuToggle.addEventListener('click', () => document.body.classList.toggle('nav-open'));
   document.querySelectorAll('.main-nav a').forEach((link) => link.addEventListener('click', () => document.body.classList.remove('nav-open')));
 })();
-
-

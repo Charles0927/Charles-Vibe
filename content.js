@@ -36,14 +36,18 @@ window.siteContent = {
       "kotaKinabalu": "Kota Kinabalu",
       "aboutEyebrow": "About",
       "aboutTitle": "Photographer",
-      "aboutCopy": "Hong Kong, in passing. Kota Kinabalu, in salt air. A small archive of places and the time spent in them.",
+      "aboutCopy": "I collect moments along the way on film and Polaroid. Hong Kong streets and Kota Kinabalu sea air are chapters already made; Hokkaido and places beyond will add to this growing photographic archive.",
       "aboutLocation": "Based in mainland China",
       "contactLabel": "Commissions / Collaboration",
       "contactTitle": "Have a place<br />in mind?",
       "contactIntro": "For photo commissions, print inquiries, and collaborations, find me here.",
       "wechatHint": "Scan to add me",
       "rednoteHint": "ID · 7424630760",
-      "backTop": "Back to top"
+      "backTop": "Back to top",
+      "projectEyebrow": "JAPAN / FILM & POLAROID",
+      "projectBack": "All work ↗",
+      "projectEmpty": "Photographs to come.",
+      "filterAll": "All"
     },
     "zh": {
       "languageLabel": "语言",
@@ -80,14 +84,18 @@ window.siteContent = {
       "kotaKinabalu": "亚庇",
       "aboutEyebrow": "关于",
       "aboutTitle": "胶片摄影",
-      "aboutCopy": "在香港，记下街巷与夜色；在亚庇，记下海风、船程和日落。留下的，是走过的地方，也是当时的光线。",
+      "aboutCopy": "我用胶片与即影即有，收藏途中值得停留的片刻。香港的街巷、亚庇的海风，是已经留下的章节；北海道和更远的地方，将继续写入这份影像档案。",
       "aboutLocation": "常驻中国大陆",
       "contactLabel": "拍摄 / 合作",
       "contactTitle": "有想记录的<br />地方吗？",
       "contactIntro": "拍摄委托、照片印制或合作想法，欢迎来聊。",
       "wechatHint": "扫码添加微信",
       "rednoteHint": "小红书号 · 7424630760",
-      "backTop": "回到顶部"
+      "backTop": "回到顶部",
+      "projectEyebrow": "日本 / 胶片与即影即有",
+      "projectBack": "全部作品 ↗",
+      "projectEmpty": "旅程将至，作品待续。",
+      "filterAll": "全部"
     },
     "ja": {
       "languageLabel": "言語",
@@ -124,14 +132,18 @@ window.siteContent = {
       "kotaKinabalu": "コタキナバル",
       "aboutEyebrow": "プロフィール",
       "aboutTitle": "フィルム写真",
-      "aboutCopy": "香港の街角と、コタキナバルへ向かう船の時間。通り過ぎた場所に残る光を、フィルムに収めています。",
+      "aboutCopy": "フィルムとポラロイドで、旅の途中に心を留めた瞬間を残しています。香港の路地、コタキナバルの潮風。これまでの記録に、これから北海道やその先の風景が加わっていきます。",
       "aboutLocation": "中国大陸在住",
       "contactLabel": "撮影依頼 / コラボレーション",
       "contactTitle": "撮影やコラボの<br />ご相談はこちら",
       "contactIntro": "撮影依頼、プリント、コラボレーションについて、お気軽にご連絡ください。",
       "wechatHint": "WeChatで追加",
       "rednoteHint": "RED ID · 7424630760",
-      "backTop": "ページ上部へ"
+      "backTop": "ページ上部へ",
+      "projectEyebrow": "日本 / フィルムとポラロイド",
+      "projectBack": "すべての作品 ↗",
+      "projectEmpty": "これから始まる旅。",
+      "filterAll": "すべて"
     },
     "ko": {
       "languageLabel": "언어",
@@ -168,14 +180,18 @@ window.siteContent = {
       "kotaKinabalu": "코타키나발루",
       "aboutEyebrow": "소개",
       "aboutTitle": "필름 사진",
-      "aboutCopy": "홍콩의 골목과 코타키나발루로 향하는 배 위의 시간. 지나온 장소에 남은 빛을 필름에 담습니다.",
+      "aboutCopy": "필름과 폴라로이드로 여행 중 마음이 머문 순간을 남깁니다. 홍콩의 골목과 코타키나발루의 바닷바람은 이미 담아 둔 이야기입니다. 앞으로 홋카이도와 더 먼 곳의 풍경도 이 사진 기록에 더해 갈 것입니다.",
       "aboutLocation": "중국 본토 거주",
       "contactLabel": "촬영 의뢰 / 협업",
       "contactTitle": "함께할 프로젝트가<br />있으신가요?",
       "contactIntro": "촬영 의뢰, 프린트 문의, 협업 제안을 기다립니다.",
       "wechatHint": "위챗으로 추가",
       "rednoteHint": "RED ID · 7424630760",
-      "backTop": "맨 위로"
+      "backTop": "맨 위로",
+      "projectEyebrow": "일본 / 필름과 폴라로이드",
+      "projectBack": "모든 작품 ↗",
+      "projectEmpty": "곧 시작될 여행.",
+      "filterAll": "전체"
     }
   },
   "collections": [
@@ -687,5 +703,11 @@ window.siteContent = {
       ]
     }
   ],
-  "version": 2
+  "version": 2,
+  "projectLanguageOrder": [
+    "ja",
+    "zh",
+    "en",
+    "ko"
+  ]
 };

@@ -651,7 +651,16 @@
         "ko": "필름과 폴라로이드. 곧 시작될 여행."
       },
       "status": "coming-soon",
-      "photos": []
+      "photos": [
+        {
+          "id": "e38af250-a775-460a-86cf-1fb9ff46277d",
+          "src": "assets/uploads/hokkaido/e2c4ad79-b206-411d-b6f2-495bc407933b.jpg",
+          "title": {},
+          "alt": {},
+          "medium": "film",
+          "visible": true
+        }
+      ]
     }
   ],
   "version": 2

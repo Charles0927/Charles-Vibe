@@ -1,4 +1,14 @@
-(function () {
+(async function () {
+  if (location.protocol !== 'file:') {
+    try {
+      const response = await fetch('site.json', { cache: 'no-store' });
+      if (response.ok) window.siteContent = await response.json();
+    } catch (error) { console.warn('Using bundled portfolio content', error); }
+  }
+  window.siteContent.collections = window.siteContent.collections.filter(collection => collection.status !== 'hidden');
+  window.siteContent.collections.forEach(collection => {
+    collection.photos = collection.status === 'coming-soon' ? [] : collection.photos.filter(photo => photo.visible !== false);
+  });
   const starCanvas = document.querySelector('#starfield');
   const starContext = starCanvas.getContext('2d');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -91,7 +101,9 @@
   const filmStockCount = document.querySelector('#film-stock-count');
   const orderedPhotos = new Map();
   const allPhotos = content.collections.flatMap((collection) => collection.photos);
-  let activeCollection = 'hong-kong';
+  const requestedCollection = new URLSearchParams(location.search).get('collection');
+  let activeCollection = content.collections.find(collection => collection.id === requestedCollection)?.id || content.collections[0]?.id;
+  let activeMedium = 'all';
   let currentPhotos = [];
   let currentIndex = 0;
   let heroFrame = allPhotos[Math.floor(Math.random() * allPhotos.length)];
@@ -120,12 +132,48 @@
   content.collections.forEach((collection) => orderedPhotos.set(collection.id, shuffle(collection.photos)));
 
   heroImage.addEventListener('load', () => applyPhotoAtmosphere(heroImage));
-  heroImage.src = heroFrame.src;
-  heroImage.alt = heroFrame.alt;
-  heroCaptionTitle.textContent = localized(heroFrame.title);
+  if (heroFrame) {
+    heroImage.src = heroFrame.src;
+    heroImage.alt = localized(heroFrame.alt);
+    heroCaptionTitle.textContent = localized(heroFrame.title);
+  } else {
+    heroImage.removeAttribute('src');
+    document.querySelector('.hero-frame').hidden = true;
+  }
+  shuffleButton.disabled = allPhotos.length < 2;
+  const tabs = document.querySelector('.collection-tabs');
+  tabs.replaceChildren(...content.collections.map(collection => {
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = 'collection-tab';
+    button.dataset.collection = collection.id; button.setAttribute('role', 'tab');
+    button.textContent = `${localized(collection.title)} · ${collection.photos.length}`;
+    return button;
+  }));
+  const mediumBar = document.createElement('div');
+  mediumBar.className = 'medium-tabs';
+  for (const medium of ['all', 'film', 'polaroid']) {
+    const button = document.createElement('button');
+    button.type = 'button'; button.dataset.medium = medium;
+    button.textContent = medium === 'all' ? 'All' : medium === 'film' ? 'Film' : 'Polaroid';
+    button.addEventListener('click', () => { activeMedium = medium; renderGallery(activeCollection); });
+    mediumBar.append(button);
+  }
+  tabs.after(mediumBar);
+  const introduction = document.createElement('p');
+  introduction.className = 'collection-introduction';
+  mediumBar.after(introduction);
+  const projectLink = document.createElement('a');
+  projectLink.className = 'project-link'; projectLink.textContent = 'Hokkaido · Film & Polaroid ↗';
+  projectLink.href = 'hokkaido/';
+  document.querySelector('.hero-copy').append(projectLink);
+  function updateTotals() {
+    document.querySelector('.work-total').textContent = content.labels[content.lang].collectionCount.replace('{count}', allPhotos.length);
+    document.querySelector('.hero-index').textContent = `01 — ${allPhotos.length}`;
+    heroCaptionCount.textContent = `${String(frameNumber).padStart(2, '0')} / ${allPhotos.length}`;
+  }
 
   function localized(value) {
-    return typeof value === 'string' ? value : value[content.lang] || value.en || '';
+    return typeof value === 'string' ? value : value?.[content.lang] || value?.en || '';
   }
 
   function applyPhotoAtmosphere(image) {
@@ -176,7 +224,7 @@
       state.timer = window.setTimeout(() => {
         if (token !== state.token) return;
         image.src = photo.src;
-        image.alt = photo.alt;
+        image.alt = localized(photo.alt);
         if (options.ambient) applyPhotoAtmosphere(incoming);
         if (onSwap) onSwap();
         if (options.parent) {
@@ -235,21 +283,43 @@
     filmStatus.textContent = content.labels[content.lang][isOpen ? 'filmOpened' : 'filmClosed'];
   }
 
+  let galleryTimer;
   function renderGallery(collectionId, animate = true) {
+    window.clearTimeout(galleryTimer);
     const collection = content.collections.find((item) => item.id === collectionId);
     if (!collection) return;
     activeCollection = collectionId;
-    currentPhotos = orderedPhotos.get(collectionId);
+    currentPhotos = (orderedPhotos.get(collectionId) || []).filter(photo => activeMedium === 'all' || (photo.medium || 'film') === activeMedium);
+    document.body.dataset.collection = collectionId;
+    introduction.textContent = localized(collection.description);
+    mediumBar.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.medium === activeMedium)));
+    tabs.querySelectorAll('button').forEach(button => {
+      const selected = button.dataset.collection === collectionId;
+      button.classList.toggle('is-active', selected); button.setAttribute('aria-selected', String(selected));
+      const item = content.collections.find(entry => entry.id === button.dataset.collection);
+      button.textContent = `${localized(item.title)} · ${item.photos.length}`;
+    });
     grid.classList.toggle('is-refreshing', animate);
-    window.setTimeout(() => {
+    galleryTimer = window.setTimeout(() => {
       collectionTitle.textContent = localized(collection.title);
       collectionCode.textContent = collection.code;
       collectionCount.textContent = content.labels[content.lang].collectionCount.replace('{count}', currentPhotos.length);
-      grid.innerHTML = currentPhotos.map((photo, index) => `
-        <button class="gallery-card" type="button" data-index="${index}" aria-label="${localized(photo.title)}">
-          <span class="card-image"><img src="${photo.src}" alt="${localized(photo.alt)}" loading="lazy" decoding="async" /></span>
-          <span class="card-caption"><strong>${localized(photo.title)}</strong><small>${photo.meta}</small></span>
-        </button>`).join('');
+      grid.replaceChildren(...currentPhotos.map((photo, index) => {
+        const button = document.createElement('button');
+        button.type = 'button'; button.className = `gallery-card ${photo.medium === 'polaroid' ? 'is-polaroid' : ''}`; button.dataset.index = index;
+        button.setAttribute('aria-label', localized(photo.title));
+        const frame = document.createElement('span'); frame.className = 'card-image';
+        const image = document.createElement('img'); image.src = photo.src; image.alt = localized(photo.alt); image.loading = 'lazy'; image.decoding = 'async'; frame.append(image);
+        const caption = document.createElement('span'); caption.className = 'card-caption';
+        const title = document.createElement('strong'); title.textContent = localized(photo.title);
+        const meta = document.createElement('small'); meta.textContent = photo.meta || collection.code;
+        caption.append(title, meta); button.append(frame, caption); return button;
+      }));
+      if (!currentPhotos.length) {
+        const empty = document.createElement('p'); empty.className = 'gallery-empty';
+        empty.textContent = ({ zh: '照片整理中，敬请期待。', en: 'Photographs to come.', ja: '写真は準備中です。', ko: '사진을 준비하고 있습니다.' })[content.lang];
+        grid.append(empty);
+      }
       grid.querySelectorAll('.gallery-card').forEach((card, index) => {
         card.style.setProperty('--card-index', index % 10);
         card.addEventListener('click', () => openLightbox(Number(card.dataset.index)));
@@ -270,7 +340,7 @@
     } else {
       lightboxImage.classList.remove('is-changing');
       lightboxImage.src = photo.src;
-      lightboxImage.alt = photo.alt;
+      lightboxImage.alt = localized(photo.alt);
       updateCaption();
     }
     lightbox.classList.add('is-open');
@@ -292,6 +362,7 @@
   }
 
   function shuffleHeroFrame() {
+    if (allPhotos.length < 2) return;
     const choices = allPhotos.filter((photo) => photo !== heroFrame);
     heroFrame = choices[Math.floor(Math.random() * choices.length)];
     frameNumber += 1;
@@ -312,7 +383,7 @@
     document.documentElement.lang = { en: 'en', zh: 'zh-CN', ja: 'ja', ko: 'ko' }[language];
     document.querySelectorAll('[data-label]').forEach((element) => {
       const key = element.dataset.label;
-      if (content.labels[language][key]) element.innerHTML = content.labels[language][key];
+      if (content.labels[language][key]) element.textContent = key === 'heroTitle' ? 'Charles’Vibe' : content.labels[language][key].replace(/<br\s*\/?\s*>/gi, '\n');
     });
     document.querySelectorAll('[data-label-aria]').forEach((element) => {
       const label = content.labels[language][element.dataset.labelAria];
@@ -320,17 +391,18 @@
     });
     document.querySelector('.language-toggle').setAttribute('aria-label', content.labels[language].languageLabel);
     renderFilmStock();
-    heroCaptionTitle.textContent = localized(heroFrame.title);
-    heroImage.alt = localized(heroFrame.alt);
+    heroCaptionTitle.textContent = localized(heroFrame?.title);
+    heroImage.alt = localized(heroFrame?.alt);
     if (lightbox.classList.contains('is-open')) lightboxImage.alt = localized(currentPhotos[currentIndex].alt);
     document.querySelectorAll('.collection-tab').forEach((tab) => {
       tab.setAttribute('aria-selected', String(tab.dataset.collection === activeCollection));
       tab.classList.toggle('is-active', tab.dataset.collection === activeCollection);
     });
     renderGallery(activeCollection, false);
+    updateTotals();
   }
 
-  renderGallery(activeCollection, false);
+  setLanguage(content.lang || 'en');
   renderFilmStock();
   filmControl.addEventListener('click', () => {
     if (filmClickTimer) window.clearTimeout(filmClickTimer);
@@ -379,4 +451,5 @@
   menuToggle.addEventListener('click', () => document.body.classList.toggle('nav-open'));
   document.querySelectorAll('.main-nav a').forEach((link) => link.addEventListener('click', () => document.body.classList.remove('nav-open')));
 })();
+
 

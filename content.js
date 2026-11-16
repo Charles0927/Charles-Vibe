@@ -23,13 +23,13 @@ window.siteContent = {
       "navWork": "Work",
       "navAbout": "About",
       "navContact": "Contact",
-      "heroEyebrow": "35mm film · Hong Kong and Sabah",
-      "heroTitle": "Hong Kong<br />and Kota Kinabalu",
-      "heroNote": "Street corners, ferry crossings, island light.",
+      "heroEyebrow": "Film · Polaroid · Photography",
+      "heroTitle": "Charles’Vibe",
+      "heroNote": "Places change. A way of seeing stays.",
       "viewWork": "Browse the photographs",
       "shuffleFrame": "Show another photograph",
       "workEyebrow": "The photographs",
-      "workTitle": "Hong Kong / Kota Kinabalu",
+      "workTitle": "Selected work",
       "selectedCount": "22 photographs",
       "collectionCount": "{count} photographs",
       "hongKong": "Hong Kong",
@@ -67,13 +67,13 @@ window.siteContent = {
       "navWork": "作品",
       "navAbout": "关于",
       "navContact": "联系",
-      "heroEyebrow": "35 毫米胶片 · 香港与沙巴",
-      "heroTitle": "香港<br />与亚庇",
-      "heroNote": "街景、渡轮与海岛光线。",
+      "heroEyebrow": "胶片 · 即影即有 · 摄影",
+      "heroTitle": "Charles’Vibe",
+      "heroNote": "走过不同的地方，留下自己的目光。",
       "viewWork": "浏览照片",
       "shuffleFrame": "再看一张",
       "workEyebrow": "照片选辑",
-      "workTitle": "香港 / 亚庇",
+      "workTitle": "作品专题",
       "selectedCount": "共 22 张",
       "collectionCount": "共 {count} 张",
       "hongKong": "香港",
@@ -111,13 +111,13 @@ window.siteContent = {
       "navWork": "写真",
       "navAbout": "プロフィール",
       "navContact": "連絡先",
-      "heroEyebrow": "35mmフィルム · 香港 / サバ州",
-      "heroTitle": "香港<br />とコタキナバル",
-      "heroNote": "街角、フェリー、島の光。",
+      "heroEyebrow": "フィルム · ポラロイド · 写真",
+      "heroTitle": "Charles’Vibe",
+      "heroNote": "旅先は変わる。まなざしは続く。",
       "viewWork": "写真を見る",
       "shuffleFrame": "別の一枚を見る",
       "workEyebrow": "作品",
-      "workTitle": "香港 / コタキナバル",
+      "workTitle": "作品集",
       "selectedCount": "全22点",
       "collectionCount": "{count}点",
       "hongKong": "香港",
@@ -155,13 +155,13 @@ window.siteContent = {
       "navWork": "사진",
       "navAbout": "소개",
       "navContact": "연락",
-      "heroEyebrow": "35mm 필름 · 홍콩 / 사바",
-      "heroTitle": "홍콩<br />과 코타키나발루",
-      "heroNote": "골목, 페리, 섬에 머문 빛.",
+      "heroEyebrow": "필름 · 폴라로이드 · 사진",
+      "heroTitle": "Charles’Vibe",
+      "heroNote": "장소는 바뀌어도 시선은 이어집니다.",
       "viewWork": "사진 보기",
       "shuffleFrame": "다른 사진 보기",
       "workEyebrow": "사진 모음",
-      "workTitle": "홍콩 / 코타키나발루",
+      "workTitle": "작품 모음",
       "selectedCount": "사진 22장",
       "collectionCount": "총 {count}장",
       "hongKong": "홍콩",
@@ -203,7 +203,10 @@ window.siteContent = {
             "ja": "海辺の自販機",
             "ko": "바닷가의 자판기"
           },
-          "meta": "HK · 01"
+          "meta": "HK · 01",
+          "id": "assets/optimized/hong-kong/hk1-000021.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk1-000025.jpg",
@@ -219,7 +222,10 @@ window.siteContent = {
             "ja": "波打ち際に立つ家族",
             "ko": "물가에 선 한 가족"
           },
-          "meta": "HK · 02"
+          "meta": "HK · 02",
+          "id": "assets/optimized/hong-kong/hk1-000025.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk1-000030.jpg",
@@ -235,7 +241,10 @@ window.siteContent = {
             "ja": "寄り添う二羽",
             "ko": "서로 꼭 붙어 있는 두 마리"
           },
-          "meta": "HK · 03"
+          "meta": "HK · 03",
+          "id": "assets/optimized/hong-kong/hk1-000030.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk1-000041.jpg",
@@ -251,7 +260,10 @@ window.siteContent = {
             "ja": "いつもの海辺の日常",
             "ko": "늘 보던 바닷가의 하루"
           },
-          "meta": "HK · 04"
+          "meta": "HK · 04",
+          "id": "assets/optimized/hong-kong/hk1-000041.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk1-000042.jpg",
@@ -267,7 +279,10 @@ window.siteContent = {
             "ja": "海風のささやき",
             "ko": "바닷바람의 속삭임"
           },
-          "meta": "HK · 05"
+          "meta": "HK · 05",
+          "id": "assets/optimized/hong-kong/hk1-000042.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk1-000052.jpg",
@@ -283,7 +298,10 @@ window.siteContent = {
             "ja": "いつもの航路を行くスターフェリー",
             "ko": "늘 오가는 스타 페리"
           },
-          "meta": "HK · 06"
+          "meta": "HK · 06",
+          "id": "assets/optimized/hong-kong/hk1-000052.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk1-000053.jpg",
@@ -299,7 +317,10 @@ window.siteContent = {
             "ja": "波の上に架かる細い通路",
             "ko": "파도 위의 좁은 통로"
           },
-          "meta": "HK · 07"
+          "meta": "HK · 07",
+          "id": "assets/optimized/hong-kong/hk1-000053.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk2-000003.jpg",
@@ -315,7 +336,10 @@ window.siteContent = {
             "ja": "夜の香港を走るタクシー",
             "ko": "밤의 홍콩을 지나는 택시"
           },
-          "meta": "HK · 08"
+          "meta": "HK · 08",
+          "id": "assets/optimized/hong-kong/hk2-000003.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk2-000005.jpg",
@@ -331,7 +355,10 @@ window.siteContent = {
             "ja": "夜の街を流れる車と灯り",
             "ko": "밤거리의 차량과 불빛"
           },
-          "meta": "HK · 09"
+          "meta": "HK · 09",
+          "id": "assets/optimized/hong-kong/hk2-000005.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk2-000025.jpg",
@@ -347,7 +374,10 @@ window.siteContent = {
             "ja": "真昼の赤いタクシー",
             "ko": "한낮의 빨간 택시"
           },
-          "meta": "HK · 10"
+          "meta": "HK · 10",
+          "id": "assets/optimized/hong-kong/hk2-000025.jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/hong-kong/hk2-000040.jpg",
@@ -363,9 +393,19 @@ window.siteContent = {
             "ja": "対岸へ向かうフェリー",
             "ko": "건너편으로 향하는 페리"
           },
-          "meta": "HK · 11"
+          "meta": "HK · 11",
+          "id": "assets/optimized/hong-kong/hk2-000040.jpg",
+          "medium": "film",
+          "visible": true
         }
-      ]
+      ],
+      "status": "published",
+      "description": {
+        "en": "",
+        "zh": "",
+        "ja": "",
+        "ko": ""
+      }
     },
     {
       "id": "kota-kinabalu",
@@ -391,7 +431,10 @@ window.siteContent = {
             "ja": "潮の合間に残る流木",
             "ko": "밀물과 썰물 사이에 남은 나무"
           },
-          "meta": "SABAH · MALAYSIA · 01"
+          "meta": "SABAH · MALAYSIA · 01",
+          "id": "assets/optimized/kota-kinabalu/kota-(3).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(9).jpg",
@@ -407,7 +450,10 @@ window.siteContent = {
             "ja": "木枠の向こうに広がる海",
             "ko": "나무틀 너머로 펼쳐진 바다"
           },
-          "meta": "SABAH · MALAYSIA · 02"
+          "meta": "SABAH · MALAYSIA · 02",
+          "id": "assets/optimized/kota-kinabalu/kota-(9).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(11).jpg",
@@ -423,7 +469,10 @@ window.siteContent = {
             "ja": "青い海を渡る船",
             "ko": "푸른 바다를 건너는 배"
           },
-          "meta": "SABAH · MALAYSIA · 03"
+          "meta": "SABAH · MALAYSIA · 03",
+          "id": "assets/optimized/kota-kinabalu/kota-(11).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(12).jpg",
@@ -439,7 +488,10 @@ window.siteContent = {
             "ja": "海辺の救命浮環",
             "ko": "해변의 구명환"
           },
-          "meta": "SABAH · MALAYSIA · 04"
+          "meta": "SABAH · MALAYSIA · 04",
+          "id": "assets/optimized/kota-kinabalu/kota-(12).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(17).jpg",
@@ -455,7 +507,10 @@ window.siteContent = {
             "ja": "ヤシの木陰でひと休み",
             "ko": "야자수 그늘에서 잠시"
           },
-          "meta": "SABAH · MALAYSIA · 05"
+          "meta": "SABAH · MALAYSIA · 05",
+          "id": "assets/optimized/kota-kinabalu/kota-(17).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(18).jpg",
@@ -471,7 +526,10 @@ window.siteContent = {
             "ja": "デッキから眺める海",
             "ko": "갑판에서 바라본 바다"
           },
-          "meta": "SABAH · MALAYSIA · 06"
+          "meta": "SABAH · MALAYSIA · 06",
+          "id": "assets/optimized/kota-kinabalu/kota-(18).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(19).jpg",
@@ -487,7 +545,10 @@ window.siteContent = {
             "ja": "船に乗って海へ",
             "ko": "배를 타고 바다로"
           },
-          "meta": "SABAH · MALAYSIA · 07"
+          "meta": "SABAH · MALAYSIA · 07",
+          "id": "assets/optimized/kota-kinabalu/kota-(19).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(20).jpg",
@@ -503,7 +564,10 @@ window.siteContent = {
             "ja": "真昼の浜辺にできた日陰",
             "ko": "한낮 해변에 드리운 그늘"
           },
-          "meta": "SABAH · MALAYSIA · 08"
+          "meta": "SABAH · MALAYSIA · 08",
+          "id": "assets/optimized/kota-kinabalu/kota-(20).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(21).jpg",
@@ -519,7 +583,10 @@ window.siteContent = {
             "ja": "沖に浮かぶ小舟と長い浜辺",
             "ko": "먼바다의 작은 배와 긴 해변"
           },
-          "meta": "SABAH · MALAYSIA · 09"
+          "meta": "SABAH · MALAYSIA · 09",
+          "id": "assets/optimized/kota-kinabalu/kota-(21).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(22).jpg",
@@ -535,7 +602,10 @@ window.siteContent = {
             "ja": "白い砂浜の上に広がる雲",
             "ko": "흰 모래 위의 구름"
           },
-          "meta": "SABAH · MALAYSIA · 10"
+          "meta": "SABAH · MALAYSIA · 10",
+          "id": "assets/optimized/kota-kinabalu/kota-(22).jpg",
+          "medium": "film",
+          "visible": true
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(24).jpg",
@@ -551,9 +621,39 @@ window.siteContent = {
             "ja": "波打ち際のコーラ缶",
             "ko": "물가의 콜라 캔"
           },
-          "meta": "SABAH · MALAYSIA · 11"
+          "meta": "SABAH · MALAYSIA · 11",
+          "id": "assets/optimized/kota-kinabalu/kota-(24).jpg",
+          "medium": "film",
+          "visible": true
         }
-      ]
+      ],
+      "status": "published",
+      "description": {
+        "en": "",
+        "zh": "",
+        "ja": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": "hokkaido",
+      "code": "HOKKAIDO · JAPAN",
+      "title": {
+        "en": "Hokkaido",
+        "zh": "北海道",
+        "ja": "北海道",
+        "ko": "홋카이도"
+      },
+      "description": {
+        "en": "Film & Polaroid. A journey to come.",
+        "zh": "胶卷与即影即有，等待旅程开始。",
+        "ja": "フィルムとポラロイド。これから始まる旅。",
+        "ko": "필름과 폴라로이드. 곧 시작될 여행."
+      },
+      "status": "coming-soon",
+      "photos": []
     }
-  ]
+  ],
+  "version": 2
 };
+

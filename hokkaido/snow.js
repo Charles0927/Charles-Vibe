@@ -2,14 +2,10 @@
   'use strict';
   const canvas = document.createElement('canvas');
   canvas.className = 'snowfall'; canvas.setAttribute('aria-hidden', 'true');
-  const button = document.createElement('button');
-  button.className = 'snow-toggle'; button.type = 'button';
-  document.body.append(canvas, button);
+  document.body.append(canvas);
+  document.body.classList.add('snow-enabled');
   const ctx = canvas.getContext('2d', { alpha: true });
-  if (!ctx) { canvas.remove(); button.remove(); return; }
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  let enabled = !motion.matches;
-  try { const saved = sessionStorage.getItem('hokkaido-snow'); if (saved !== null) enabled = saved === 'on'; } catch {}
+  if (!ctx) { canvas.remove(); return; }
   let width = 0, height = 0, flakes = [], frame = 0, last = 0, time = 0, bounds = [];
   const random = (a,b) => a + Math.random() * (b-a);
   const sprites = Array.from({length: 12}, (_,i) => {
@@ -29,12 +25,12 @@
   function flake(initial=false) {
     const z=Math.pow(Math.random(),1.8);
     return { x:random(-60,width+60), y:initial?random(-30,height+30):random(-80,-15),
-      z, size:1.8+z*10, speed:12+z*40+random(0,9), opacity:random(.28,.64)*(1-z*.25),
+      z, size:3.4+z*17, speed:12+z*40+random(0,9), opacity:random(.34,.72)*(1-z*.25),
       phase:random(0,Math.PI*2), flutter:random(.25,.8), spin:random(-.25,.25),
       angle:random(0,6.28), sprite:Math.floor(random(0,sprites.length)) };
   }
   function measure() {
-    bounds=[...document.querySelectorAll('.photo img,header,h1,#description,#filters,.snow-toggle')]
+    bounds=[...document.querySelectorAll('.photo img,header,h1,#description,#filters')]
       .map(e=>e.getBoundingClientRect()).filter(r=>r.bottom>0&&r.top<height);
   }
   function resize() {
@@ -45,13 +41,7 @@
     flakes=Array.from({length:Math.min(240,Math.max(65,Math.round(width*height/6000)))},()=>flake(true));
     measure();
   }
-  function labels() {
-    const l=document.documentElement.lang.split('-')[0];
-    const copy=({ja:['雪を止める','雪を降らせる'],zh:['暂停飘雪','开启飘雪'],en:['Pause snow','Let it snow'],ko:['눈 멈추기','눈 내리기']})[l]||['Pause snow','Let it snow'];
-    button.textContent=copy[enabled?0:1];button.setAttribute('aria-pressed',String(enabled));
-    document.body.classList.toggle('snow-enabled',enabled);
-  }
-  function allowed(){return enabled&&!document.hidden&&!document.querySelector('dialog[open]');}
+  function allowed(){return !document.hidden&&!document.querySelector('dialog[open]');}
   function draw(now) {
     frame=0;if(!allowed()){last=0;return;}
     const dt=Math.min((now-(last||now))/1000,.05);last=now;time+=dt;
@@ -71,14 +61,12 @@
     for(const r of bounds)ctx.clearRect(r.left-3,r.top-3,r.width+6,r.height+6);
     frame=requestAnimationFrame(draw);
   }
-  function update(){labels();cancelAnimationFrame(frame);frame=0;last=0;ctx.clearRect(0,0,width,height);if(allowed())frame=requestAnimationFrame(draw);}
-  button.onclick=()=>{enabled=!enabled;try{sessionStorage.setItem('hokkaido-snow',enabled?'on':'off');}catch{}update();measure();};
+  function update(){cancelAnimationFrame(frame);frame=0;last=0;ctx.clearRect(0,0,width,height);if(allowed())frame=requestAnimationFrame(draw);}
   addEventListener('resize',()=>{resize();update();},{passive:true});
   addEventListener('scroll',measure,{passive:true});
   document.addEventListener('visibilitychange',update);
   document.addEventListener('load',measure,true);
-  motion.addEventListener('change',()=>{enabled=!motion.matches;update();});
-  new MutationObserver(()=>{labels();measure();}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+  new MutationObserver(measure).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
   new MutationObserver(()=>{measure();update();}).observe(document.querySelector('#viewer'),{attributes:true,attributeFilter:['open']});
   new MutationObserver(measure).observe(document.querySelector('#photos'),{childList:true,subtree:true});
   resize();update();

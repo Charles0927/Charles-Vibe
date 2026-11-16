@@ -661,6 +661,30 @@ window.siteContent = {
           "visible": true
         }
       ]
+    },
+    {
+      "id": "project-1f37ced2",
+      "code": "福冈",
+      "title": {
+        "zh": "福冈",
+        "en": "福冈",
+        "ja": "福冈",
+        "ko": "福冈"
+      },
+      "description": {},
+      "status": "hidden",
+      "photos": [
+        {
+          "id": "9f592aee-a26b-45b9-935e-18e1d102a89d",
+          "src": "assets/uploads/project-1f37ced2/c5cc51e4-aded-4be2-a1dd-26002ed1dc03.jpg",
+          "title": {
+            "zh": "The Teaser"
+          },
+          "alt": {},
+          "medium": "film",
+          "visible": true
+        }
+      ]
     }
   ],
   "version": 2

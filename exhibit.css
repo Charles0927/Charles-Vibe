@@ -1,0 +1,31 @@
+/* Exhibition layer. The archive and content editor remain the source of every frame. */
+.exhibit-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding:20px 0 28px}
+.exhibit-bar p{margin:0;font-family:Georgia,serif;font-style:italic;font-size:17px;color:var(--muted)}
+.exhibit-modes{display:flex;gap:6px}.exhibit-modes button{background:transparent;border:1px solid transparent;border-radius:0;padding:9px 16px;cursor:pointer;font-size:13px}
+.exhibit-modes button[aria-pressed=true]{border-color:var(--line);color:var(--ink);background:#c5c7bd0a}
+.exhibit-stage{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:clamp(22px,4vw,64px);align-items:center;outline-offset:8px}
+.exhibit-stage[hidden],.exhibit-rail[hidden],.exhibit-bar[hidden],#gallery-grid[hidden]{display:none!important}
+.exhibit-mount{display:flex;align-items:center;justify-content:center;border:1px solid #cbd1c214;background:linear-gradient(135deg,#b7bdc508,#0000002b);padding:clamp(12px,2vw,28px);width:100%;height:clamp(340px,65vh,760px);cursor:zoom-in;transition:opacity .5s ease;touch-action:pan-y}
+.exhibit-mount img{width:100%;height:100%;object-fit:contain;filter:none;box-shadow:none}
+.exhibit-caption{transition:opacity .5s ease}.exhibit-number{font:italic clamp(64px,7vw,106px)/1 Georgia,serif;color:#d3c6aa66;letter-spacing:-.08em}
+.exhibit-caption h3{font-size:22px;font-weight:400;line-height:1.55;margin:25px 0 12px;overflow-wrap:anywhere}
+.exhibit-caption>p{font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.exhibit-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);margin-top:36px;padding-top:15px}
+.exhibit-nav button{border:0;background:transparent;padding:12px;cursor:pointer;font-size:22px}.exhibit-nav span{font:11px var(--mono)}.exhibit-nav button:disabled{opacity:.25}
+.exhibit-caption .exhibit-hint{font-size:10px;letter-spacing:0;line-height:1.7;margin-top:18px}
+.exhibit-stage.is-fading .exhibit-mount,.exhibit-stage.is-fading .exhibit-caption{opacity:.28}
+.exhibit-rail{display:flex;gap:12px;overflow-x:auto;padding:24px 0 12px;scrollbar-width:thin;scrollbar-color:#72766c55 transparent}
+.exhibit-rail button{position:relative;flex:0 0 86px;background:transparent;border:1px solid transparent;padding:7px 7px 5px;cursor:pointer;opacity:.45;transition:opacity .3s,border-color .3s}
+.exhibit-rail button[aria-pressed=true],.exhibit-rail button:hover{opacity:1;border-color:#cbb99488}
+.exhibit-rail img{width:70px;height:53px;object-fit:contain}.exhibit-rail span{display:block;padding-top:6px;font:9px var(--mono);text-align:left}
+.is-polaroid .exhibit-mount{background:#dedbd2;padding:30px}
+.contact-sheet{columns:unset!important;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 18px}
+.contact-sheet .gallery-card{margin:0;border:1px solid var(--line);padding:12px;align-self:start}
+.contact-sheet .card-image{height:190px;background:transparent;display:flex;align-items:center}
+.contact-sheet .card-image img{width:100%;height:100%;object-fit:contain;transform:none!important}
+.contact-sheet .gallery-card strong{font-size:13px}.contact-sheet .gallery-card small{font-size:9px}
+.hero-index{font-family:Georgia,serif!important;font-style:italic;letter-spacing:.08em}
+@media(min-width:900px){.hero{grid-template-columns:minmax(290px,.7fr) minmax(0,1.3fr)}.hero h1{font-size:clamp(60px,6.3vw,98px)}}
+@media(max-width:760px){.exhibit-stage{grid-template-columns:1fr;gap:16px}.exhibit-mount{height:55svh;min-height:300px}.exhibit-caption{display:grid;grid-template-columns:52px 1fr;gap:0 16px;align-items:center}.exhibit-number{font-size:48px;grid-row:1/3}.exhibit-caption h3{font-size:18px;margin:0}.exhibit-caption>p{margin:5px 0}.exhibit-nav{grid-column:1/-1;margin-top:15px;padding-top:4px}.exhibit-caption .exhibit-hint{grid-column:1/-1;margin-top:6px}.exhibit-bar{align-items:flex-start;gap:12px}.exhibit-bar p{font-size:13px;max-width:110px}.exhibit-modes button{padding:8px 10px}.contact-sheet{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}.contact-sheet .card-image{height:145px}.exhibit-rail{padding-top:16px}}
+@media(prefers-reduced-motion:reduce){.exhibit-mount,.exhibit-caption,.exhibit-rail button{transition:none}}
+@media(max-width:760px){.exhibit-mount{height:auto;min-height:0;padding:12px}.exhibit-mount img{height:auto;max-height:65svh}.exhibit-bar p{font-style:normal;max-width:125px}.work-section{padding-top:38px}}

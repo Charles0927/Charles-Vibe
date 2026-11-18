@@ -47,7 +47,15 @@
       "projectEyebrow": "JAPAN / FILM & POLAROID",
       "projectBack": "All work ↗",
       "projectEmpty": "Photographs to come.",
-      "filterAll": "All"
+      "filterAll": "All",
+      "exhibitWander": "Wander",
+      "exhibitSheet": "Contact sheet",
+      "exhibitNote": "Stay a little longer.",
+      "exhibitPrevious": "Previous frame",
+      "exhibitNext": "Next frame",
+      "exhibitEnlarge": "View photograph",
+      "exhibitHint": "← → Navigate · Select to enlarge",
+      "exhibitArchive": "A personal photographic archive"
     },
     "zh": {
       "languageLabel": "语言",
@@ -95,7 +103,15 @@
       "projectEyebrow": "日本 / 胶片与即影即有",
       "projectBack": "全部作品 ↗",
       "projectEmpty": "旅程将至，作品待续。",
-      "filterAll": "全部"
+      "filterAll": "全部",
+      "exhibitWander": "漫游",
+      "exhibitSheet": "底片总览",
+      "exhibitNote": "慢一点，看见更多。",
+      "exhibitPrevious": "上一帧",
+      "exhibitNext": "下一帧",
+      "exhibitEnlarge": "放大观看",
+      "exhibitHint": "← → 切换 · 点击照片放大",
+      "exhibitArchive": "私人影像档案"
     },
     "ja": {
       "languageLabel": "言語",
@@ -143,7 +159,15 @@
       "projectEyebrow": "日本 / フィルムとポラロイド",
       "projectBack": "すべての作品 ↗",
       "projectEmpty": "これから始まる旅。",
-      "filterAll": "すべて"
+      "filterAll": "すべて",
+      "exhibitWander": "めぐる",
+      "exhibitSheet": "コンタクトシート",
+      "exhibitNote": "少し、立ち止まる。",
+      "exhibitPrevious": "前の一枚",
+      "exhibitNext": "次の一枚",
+      "exhibitEnlarge": "写真を拡大",
+      "exhibitHint": "← → 切り替え · 写真を選んで拡大",
+      "exhibitArchive": "個人の写真アーカイブ"
     },
     "ko": {
       "languageLabel": "언어",
@@ -191,7 +215,15 @@
       "projectEyebrow": "일본 / 필름과 폴라로이드",
       "projectBack": "모든 작품 ↗",
       "projectEmpty": "곧 시작될 여행.",
-      "filterAll": "전체"
+      "filterAll": "전체",
+      "exhibitWander": "산책",
+      "exhibitSheet": "전체 필름",
+      "exhibitNote": "조금 더 머물러 보세요.",
+      "exhibitPrevious": "이전 사진",
+      "exhibitNext": "다음 사진",
+      "exhibitEnlarge": "사진 확대",
+      "exhibitHint": "← → 이동 · 사진을 눌러 확대",
+      "exhibitArchive": "개인 사진 아카이브"
     }
   },
   "collections": [

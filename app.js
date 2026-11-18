@@ -427,8 +427,8 @@
     }
   });
   shuffleButton.addEventListener('click', shuffleHeroFrame);
-  document.querySelectorAll('[data-collection]').forEach((button) => button.addEventListener('click', () => {
-    document.querySelectorAll('[data-collection]').forEach((item) => {
+  document.querySelectorAll('button[data-collection]').forEach((button) => button.addEventListener('click', () => {
+    document.querySelectorAll('button[data-collection]').forEach((item) => {
       const active = item.dataset.collection === button.dataset.collection;
       item.classList.toggle('is-active', active);
       if (item.classList.contains('roll-row')) item.classList.toggle('active', active);

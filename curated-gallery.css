@@ -1,0 +1,15 @@
+/* Ordered photographic rows: preserve full frames, align the image edges. */
+.gallery-grid.curated-gallery{display:block;columns:auto;--row-gap:clamp(16px,2.2vw,28px);--row-height:440px}
+.curated-row{display:flex;align-items:flex-start;gap:var(--row-gap);width:min(100%,calc(var(--row-ratio) * var(--row-height) + var(--row-gaps) * var(--row-gap)));margin:0 auto clamp(30px,3.8vw,50px)}
+.curated-gallery .gallery-card{display:block;flex:var(--frame-ratio,1.5) 1 0;width:0;min-width:0;margin:0;animation:none}
+.curated-gallery .card-image{width:100%;aspect-ratio:var(--frame-ratio,1.5);display:block;background:transparent}
+.curated-gallery .gallery-card img{display:block;width:100%;height:100%;object-fit:contain;max-width:100%;transform:none!important;filter:none!important}
+.curated-gallery .card-image::after{display:none}
+.curated-gallery .gallery-card:hover img{opacity:.94}
+.curated-gallery .gallery-card .card-caption{align-items:baseline;padding-top:12px;min-height:40px;transform:none}
+.curated-gallery .card-caption strong{min-width:0;overflow-wrap:anywhere}
+.curated-gallery .card-caption small{white-space:nowrap}
+.curated-gallery .gallery-card:focus-visible{outline:1px solid var(--accent);outline-offset:6px}
+.curated-gallery .gallery-card.is-polaroid{box-sizing:border-box}
+@media(max-width:760px){.curated-gallery .card-caption{display:block!important}.curated-gallery .card-caption small{display:block;padding-top:5px}.curated-gallery .card-caption strong{font-size:16px}}
+@media(max-width:560px){.gallery-grid.curated-gallery{--row-gap:24px}.curated-row{display:grid;grid-template-columns:minmax(0,1fr);width:100%;gap:24px;margin-bottom:24px}.curated-gallery .gallery-card{width:100%}.curated-gallery .card-image{aspect-ratio:auto;display:flex;justify-content:center;align-items:center}.curated-gallery .gallery-card img{width:100%;height:auto;max-height:62svh;object-fit:contain}.curated-gallery .gallery-card .card-caption{display:flex!important;min-height:0;padding-top:10px}.curated-gallery .card-caption small{padding-top:0}.curated-gallery .card-caption strong{font-size:17px}}

@@ -129,7 +129,7 @@
     return result;
   }
 
-  content.collections.forEach((collection) => orderedPhotos.set(collection.id, shuffle(collection.photos)));
+  content.collections.forEach((collection) => orderedPhotos.set(collection.id, collection.galleryLayout?.mode === 'rows' ? [...collection.photos] : shuffle(collection.photos)));
 
   heroImage.addEventListener('load', () => applyPhotoAtmosphere(heroImage));
   if (heroFrame) {
@@ -283,6 +283,13 @@
     filmStatus.textContent = content.labels[content.lang][isOpen ? 'filmOpened' : 'filmClosed'];
   }
 
+  function sizeRow(row) {
+    const cards = [...row.children];
+    const ratios = cards.map(card => Number(card.style.getPropertyValue('--frame-ratio')) || 1.5);
+    row.style.setProperty('--row-ratio', ratios.reduce((sum, ratio) => sum + ratio, 0));
+    row.style.setProperty('--row-gaps', Math.max(0, cards.length - 1));
+  }
+
   let galleryTimer;
   function renderGallery(collectionId, animate = true) {
     window.clearTimeout(galleryTimer);
@@ -304,17 +311,39 @@
       collectionTitle.textContent = localized(collection.title);
       collectionCode.textContent = collection.code;
       collectionCount.textContent = content.labels[content.lang].collectionCount.replace('{count}', currentPhotos.length);
-      grid.replaceChildren(...currentPhotos.map((photo, index) => {
+      const curated = collection.galleryLayout?.mode === 'rows' && currentPhotos.length > 0;
+      grid.classList.toggle('curated-gallery', curated);
+      const cards = currentPhotos.map((photo, index) => {
         const button = document.createElement('button');
         button.type = 'button'; button.className = `gallery-card ${photo.medium === 'polaroid' ? 'is-polaroid' : ''}`; button.dataset.index = index;
         button.setAttribute('aria-label', localized(photo.title));
         const frame = document.createElement('span'); frame.className = 'card-image';
-        const image = document.createElement('img'); image.src = photo.src; image.alt = localized(photo.alt); image.loading = 'lazy'; image.decoding = 'async'; frame.append(image);
+        const image = document.createElement('img'); image.src = photo.src; image.alt = localized(photo.alt); image.loading = 'lazy'; image.decoding = 'async';
+        const ratio = photo.width && photo.height ? photo.width / photo.height : 1.5;
+        button.style.setProperty('--frame-ratio', ratio);
+        if (photo.width && photo.height) { image.width = photo.width; image.height = photo.height; }
+        image.addEventListener('load', () => {
+          if (!image.naturalWidth || !image.naturalHeight) return;
+          button.style.setProperty('--frame-ratio', image.naturalWidth / image.naturalHeight);
+          const row = button.closest('.curated-row'); if (row) sizeRow(row);
+        });
+        frame.append(image);
         const caption = document.createElement('span'); caption.className = 'card-caption';
         const title = document.createElement('strong'); title.textContent = localized(photo.title);
         const meta = document.createElement('small'); meta.textContent = photo.meta || collection.code;
         caption.append(title, meta); button.append(frame, caption); return button;
-      }));
+      });
+      if (curated) {
+        const rows = []; let offset = 0, rowIndex = 0;
+        while (offset < cards.length) {
+          const planned = Number(collection.galleryLayout.rowSizes?.[rowIndex]);
+          const count = Number.isInteger(planned) && planned > 0 ? Math.min(planned, 3) : 2;
+          const row = document.createElement('div'); row.className = 'curated-row';
+          row.append(...cards.slice(offset, offset + count)); sizeRow(row); rows.push(row);
+          offset += count; rowIndex += 1;
+        }
+        grid.replaceChildren(...rows);
+      } else { grid.replaceChildren(...cards); }
       if (!currentPhotos.length) {
         const empty = document.createElement('p'); empty.className = 'gallery-empty';
         empty.textContent = ({ zh: '照片整理中，敬请期待。', en: 'Photographs to come.', ja: '写真は準備中です。', ko: '사진을 준비하고 있습니다.' })[content.lang];

@@ -206,99 +206,25 @@
       },
       "photos": [
         {
-          "src": "assets/optimized/hong-kong/hk1-000021.jpg",
+          "src": "assets/optimized/hong-kong/hk2-000040.jpg",
           "alt": {
-            "en": "A red Coca-Cola vending machine and a bench beside the sandy waterfront",
-            "zh": "海边的汽水机",
-            "ja": "海辺の自販機",
-            "ko": "바닷가의 자판기"
+            "en": "A ferry crossing Victoria Harbour with the Hong Kong skyline beyond",
+            "zh": "轮渡驶向对岸",
+            "ja": "対岸へ向かうフェリー",
+            "ko": "건너편으로 향하는 페리"
           },
           "title": {
-            "zh": "汽水",
-            "en": "Soda",
-            "ja": "ソーダ",
-            "ko": "소다"
+            "zh": "对岸",
+            "en": "The other shore",
+            "ja": "対岸",
+            "ko": "건너편"
           },
-          "meta": "HK · 01",
-          "id": "assets/optimized/hong-kong/hk1-000021.jpg",
+          "meta": "HK · 11",
+          "id": "assets/optimized/hong-kong/hk2-000040.jpg",
           "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/hong-kong/hk1-000025.jpg",
-          "alt": {
-            "en": "A family of three standing together at the water’s edge",
-            "zh": "一家三口站在潮水边",
-            "ja": "波打ち際に並ぶ三人家族",
-            "ko": "물가에 함께 선 세 식구"
-          },
-          "title": {
-            "zh": "一家人",
-            "en": "Family",
-            "ja": "家族",
-            "ko": "가족"
-          },
-          "meta": "HK · 02",
-          "id": "assets/optimized/hong-kong/hk1-000025.jpg",
-          "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/hong-kong/hk1-000030.jpg",
-          "alt": {
-            "en": "Two birds standing close together on the sand",
-            "zh": "两只鸟并肩停在沙滩上",
-            "ja": "砂浜に寄り添って立つ二羽の鳥",
-            "ko": "모래 위에 나란히 선 두 마리 새"
-          },
-          "title": {
-            "en": "Close, side by side",
-            "zh": "亲密无间",
-            "ja": "寄り添う二羽",
-            "ko": "서로 꼭 붙어 있는 두 마리"
-          },
-          "meta": "HK · 03",
-          "id": "assets/optimized/hong-kong/hk1-000030.jpg",
-          "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/hong-kong/hk1-000041.jpg",
-          "alt": {
-            "en": "Recycling bins by the waterfront",
-            "zh": "海边日常，一切照常",
-            "ja": "いつもの海辺の日常",
-            "ko": "늘 보던 바닷가의 하루"
-          },
-          "title": {
-            "zh": "沿岸",
-            "en": "Along the shore",
-            "ja": "海沿い",
-            "ko": "해안을 따라"
-          },
-          "meta": "HK · 04",
-          "id": "assets/optimized/hong-kong/hk1-000041.jpg",
-          "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/hong-kong/hk1-000042.jpg",
-          "alt": {
-            "en": "A lifebuoy tied to a harbour post, warning tape along the waterfront, and a yacht offshore",
-            "zh": "海港边的系缆柱上挂着救生圈，岸边拉着警示带，远处有一艘游艇",
-            "ja": "港の杭に結ばれた救命浮環、海辺の規制テープ、沖を行くヨット",
-            "ko": "항구 기둥에 묶인 구명환과 해안의 안전띠, 바다 위의 요트"
-          },
-          "title": {
-            "en": "The sea breeze’s quiet words",
-            "zh": "海风的絮语",
-            "ja": "海風のささやき",
-            "ko": "바닷바람의 속삭임"
-          },
-          "meta": "HK · 05",
-          "id": "assets/optimized/hong-kong/hk1-000042.jpg",
-          "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 966
         },
         {
           "src": "assets/optimized/hong-kong/hk1-000052.jpg",
@@ -317,7 +243,9 @@
           "meta": "HK · 06",
           "id": "assets/optimized/hong-kong/hk1-000052.jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 966
         },
         {
           "src": "assets/optimized/hong-kong/hk1-000053.jpg",
@@ -336,45 +264,114 @@
           "meta": "HK · 07",
           "id": "assets/optimized/hong-kong/hk1-000053.jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 966
         },
         {
-          "src": "assets/optimized/hong-kong/hk2-000003.jpg",
+          "src": "assets/optimized/hong-kong/hk1-000025.jpg",
           "alt": {
-            "en": "Night traffic and taxis along a Hong Kong street, seen from above",
-            "zh": "夜色里的香港出租车",
-            "ja": "夜の香港を走るタクシー",
-            "ko": "밤의 홍콩을 지나는 택시"
+            "en": "A family of three standing together at the water’s edge",
+            "zh": "一家三口站在潮水边",
+            "ja": "波打ち際に並ぶ三人家族",
+            "ko": "물가에 함께 선 세 식구"
           },
           "title": {
-            "zh": "夜行",
-            "en": "Night passage",
-            "ja": "夜をゆく",
-            "ko": "밤길"
+            "zh": "一家人",
+            "en": "Family",
+            "ja": "家族",
+            "ko": "가족"
           },
-          "meta": "HK · 08",
-          "id": "assets/optimized/hong-kong/hk2-000003.jpg",
+          "meta": "HK · 02",
+          "id": "assets/optimized/hong-kong/hk1-000025.jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 966
         },
         {
-          "src": "assets/optimized/hong-kong/hk2-000005.jpg",
+          "src": "assets/optimized/hong-kong/hk1-000030.jpg",
           "alt": {
-            "en": "Motion-blurred traffic, taxis and shop lights on a Hong Kong street at night",
-            "zh": "夜色里的街车与灯光",
-            "ja": "夜の街を流れる車と灯り",
-            "ko": "밤거리의 차량과 불빛"
+            "en": "Two birds standing close together on the sand",
+            "zh": "两只鸟并肩停在沙滩上",
+            "ja": "砂浜に寄り添って立つ二羽の鳥",
+            "ko": "모래 위에 나란히 선 두 마리 새"
           },
           "title": {
-            "zh": "流光",
-            "en": "Passing lights",
-            "ja": "流れる光",
-            "ko": "흐르는 빛"
+            "en": "Close, side by side",
+            "zh": "亲密无间",
+            "ja": "寄り添う二羽",
+            "ko": "서로 꼭 붙어 있는 두 마리"
           },
-          "meta": "HK · 09",
-          "id": "assets/optimized/hong-kong/hk2-000005.jpg",
+          "meta": "HK · 03",
+          "id": "assets/optimized/hong-kong/hk1-000030.jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 966
+        },
+        {
+          "src": "assets/optimized/hong-kong/hk1-000042.jpg",
+          "alt": {
+            "en": "A lifebuoy tied to a harbour post, warning tape along the waterfront, and a yacht offshore",
+            "zh": "海港边的系缆柱上挂着救生圈，岸边拉着警示带，远处有一艘游艇",
+            "ja": "港の杭に結ばれた救命浮環、海辺の規制テープ、沖を行くヨット",
+            "ko": "항구 기둥에 묶인 구명환과 해안의 안전띠, 바다 위의 요트"
+          },
+          "title": {
+            "en": "The sea breeze’s quiet words",
+            "zh": "海风的絮语",
+            "ja": "海風のささやき",
+            "ko": "바닷바람의 속삭임"
+          },
+          "meta": "HK · 05",
+          "id": "assets/optimized/hong-kong/hk1-000042.jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 966
+        },
+        {
+          "src": "assets/optimized/hong-kong/hk1-000021.jpg",
+          "alt": {
+            "en": "A red Coca-Cola vending machine and a bench beside the sandy waterfront",
+            "zh": "海边的汽水机",
+            "ja": "海辺の自販機",
+            "ko": "바닷가의 자판기"
+          },
+          "title": {
+            "zh": "汽水",
+            "en": "Soda",
+            "ja": "ソーダ",
+            "ko": "소다"
+          },
+          "meta": "HK · 01",
+          "id": "assets/optimized/hong-kong/hk1-000021.jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 966
+        },
+        {
+          "src": "assets/optimized/hong-kong/hk1-000041.jpg",
+          "alt": {
+            "en": "Recycling bins by the waterfront",
+            "zh": "海边日常，一切照常",
+            "ja": "いつもの海辺の日常",
+            "ko": "늘 보던 바닷가의 하루"
+          },
+          "title": {
+            "zh": "沿岸",
+            "en": "Along the shore",
+            "ja": "海沿い",
+            "ko": "해안을 따라"
+          },
+          "meta": "HK · 04",
+          "id": "assets/optimized/hong-kong/hk1-000041.jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 966
         },
         {
           "src": "assets/optimized/hong-kong/hk2-000025.jpg",
@@ -393,26 +390,51 @@
           "meta": "HK · 10",
           "id": "assets/optimized/hong-kong/hk2-000025.jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 966
         },
         {
-          "src": "assets/optimized/hong-kong/hk2-000040.jpg",
+          "src": "assets/optimized/hong-kong/hk2-000003.jpg",
           "alt": {
-            "en": "A ferry crossing Victoria Harbour with the Hong Kong skyline beyond",
-            "zh": "轮渡驶向对岸",
-            "ja": "対岸へ向かうフェリー",
-            "ko": "건너편으로 향하는 페리"
+            "en": "Night traffic and taxis along a Hong Kong street, seen from above",
+            "zh": "夜色里的香港出租车",
+            "ja": "夜の香港を走るタクシー",
+            "ko": "밤의 홍콩을 지나는 택시"
           },
           "title": {
-            "zh": "对岸",
-            "en": "The other shore",
-            "ja": "対岸",
-            "ko": "건너편"
+            "zh": "夜行",
+            "en": "Night passage",
+            "ja": "夜をゆく",
+            "ko": "밤길"
           },
-          "meta": "HK · 11",
-          "id": "assets/optimized/hong-kong/hk2-000040.jpg",
+          "meta": "HK · 08",
+          "id": "assets/optimized/hong-kong/hk2-000003.jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 966,
+          "height": 1440
+        },
+        {
+          "src": "assets/optimized/hong-kong/hk2-000005.jpg",
+          "alt": {
+            "en": "Motion-blurred traffic, taxis and shop lights on a Hong Kong street at night",
+            "zh": "夜色里的街车与灯光",
+            "ja": "夜の街を流れる車と灯り",
+            "ko": "밤거리의 차량과 불빛"
+          },
+          "title": {
+            "zh": "流光",
+            "en": "Passing lights",
+            "ja": "流れる光",
+            "ko": "흐르는 빛"
+          },
+          "meta": "HK · 09",
+          "id": "assets/optimized/hong-kong/hk2-000005.jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 966
         }
       ],
       "status": "published",
@@ -421,6 +443,15 @@
         "zh": "",
         "ja": "",
         "ko": ""
+      },
+      "galleryLayout": {
+        "mode": "rows",
+        "rowSizes": [
+          3,
+          2,
+          3,
+          3
+        ]
       }
     },
     {
@@ -433,82 +464,6 @@
         "ko": "코타키나발루"
       },
       "photos": [
-        {
-          "src": "assets/optimized/kota-kinabalu/kota-(3).jpg",
-          "alt": {
-            "en": "Driftwood against a quiet stretch of blue sea",
-            "zh": "浮木停在潮水之间",
-            "ja": "潮の合間に残る流木",
-            "ko": "밀물과 썰물 사이에 남은 나무"
-          },
-          "title": {
-            "zh": "潮间",
-            "en": "Between tides",
-            "ja": "潮のあいだ",
-            "ko": "밀물과 썰물 사이"
-          },
-          "meta": "SABAH · MALAYSIA · 01",
-          "id": "assets/optimized/kota-kinabalu/kota-(3).jpg",
-          "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/kota-kinabalu/kota-(9).jpg",
-          "alt": {
-            "en": "A weathered wooden frame opening toward the sea",
-            "zh": "木框之外，海还很远",
-            "ja": "木枠の向こうに広がる海",
-            "ko": "나무틀 너머로 펼쳐진 바다"
-          },
-          "title": {
-            "zh": "框外",
-            "en": "Beyond the frame",
-            "ja": "枠の向こう",
-            "ko": "프레임 너머"
-          },
-          "meta": "SABAH · MALAYSIA · 02",
-          "id": "assets/optimized/kota-kinabalu/kota-(9).jpg",
-          "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/kota-kinabalu/kota-(11).jpg",
-          "alt": {
-            "en": "A passenger boat crossing bright blue water, with people visible on board",
-            "zh": "驶过海面的船",
-            "ja": "青い海を渡る船",
-            "ko": "푸른 바다를 건너는 배"
-          },
-          "title": {
-            "zh": "向海",
-            "en": "Seaward",
-            "ja": "海へ",
-            "ko": "바다로"
-          },
-          "meta": "SABAH · MALAYSIA · 03",
-          "id": "assets/optimized/kota-kinabalu/kota-(11).jpg",
-          "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/kota-kinabalu/kota-(12).jpg",
-          "alt": {
-            "en": "A red lifebuoy among beach chairs and wooden posts at the water’s edge",
-            "zh": "岸边的救生圈",
-            "ja": "海辺の救命浮環",
-            "ko": "해변의 구명환"
-          },
-          "title": {
-            "zh": "泊岸",
-            "en": "By the shore",
-            "ja": "岸辺",
-            "ko": "물가"
-          },
-          "meta": "SABAH · MALAYSIA · 04",
-          "id": "assets/optimized/kota-kinabalu/kota-(12).jpg",
-          "medium": "film",
-          "visible": true
-        },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(17).jpg",
           "alt": {
@@ -526,45 +481,9 @@
           "meta": "SABAH · MALAYSIA · 05",
           "id": "assets/optimized/kota-kinabalu/kota-(17).jpg",
           "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/kota-kinabalu/kota-(18).jpg",
-          "alt": {
-            "en": "A view over the water from a boat deck",
-            "zh": "从甲板上看海",
-            "ja": "デッキから眺める海",
-            "ko": "갑판에서 바라본 바다"
-          },
-          "title": {
-            "zh": "海面",
-            "en": "Open water",
-            "ja": "海面",
-            "ko": "수면"
-          },
-          "meta": "SABAH · MALAYSIA · 06",
-          "id": "assets/optimized/kota-kinabalu/kota-(18).jpg",
-          "medium": "film",
-          "visible": true
-        },
-        {
-          "src": "assets/optimized/kota-kinabalu/kota-(19).jpg",
-          "alt": {
-            "en": "Passengers and a crew member aboard a boat out at sea",
-            "zh": "这一程，坐船出海",
-            "ja": "船に乗って海へ",
-            "ko": "배를 타고 바다로"
-          },
-          "title": {
-            "zh": "离岸",
-            "en": "Leaving shore",
-            "ja": "岸を離れて",
-            "ko": "해안을 떠나"
-          },
-          "meta": "SABAH · MALAYSIA · 07",
-          "id": "assets/optimized/kota-kinabalu/kota-(19).jpg",
-          "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 954
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(20).jpg",
@@ -583,45 +502,93 @@
           "meta": "SABAH · MALAYSIA · 08",
           "id": "assets/optimized/kota-kinabalu/kota-(20).jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 954
         },
         {
-          "src": "assets/optimized/kota-kinabalu/kota-(21).jpg",
+          "src": "assets/optimized/kota-kinabalu/kota-(18).jpg",
           "alt": {
-            "en": "A wide beach with small boats in the distance",
-            "zh": "岸外的小船，让海岸显得更长",
-            "ja": "沖に浮かぶ小舟と長い浜辺",
-            "ko": "먼바다의 작은 배와 긴 해변"
+            "en": "A view over the water from a boat deck",
+            "zh": "从甲板上看海",
+            "ja": "デッキから眺める海",
+            "ko": "갑판에서 바라본 바다"
           },
           "title": {
-            "zh": "近岸",
-            "en": "Offshore",
-            "ja": "沖合",
-            "ko": "앞바다"
+            "zh": "海面",
+            "en": "Open water",
+            "ja": "海面",
+            "ko": "수면"
           },
-          "meta": "SABAH · MALAYSIA · 09",
-          "id": "assets/optimized/kota-kinabalu/kota-(21).jpg",
+          "meta": "SABAH · MALAYSIA · 06",
+          "id": "assets/optimized/kota-kinabalu/kota-(18).jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 954
         },
         {
-          "src": "assets/optimized/kota-kinabalu/kota-(22).jpg",
+          "src": "assets/optimized/kota-kinabalu/kota-(19).jpg",
           "alt": {
-            "en": "Tall white clouds above a pale sandy beach and turquoise water",
-            "zh": "白沙上方的云",
-            "ja": "白い砂浜の上に広がる雲",
-            "ko": "흰 모래 위의 구름"
+            "en": "Passengers and a crew member aboard a boat out at sea",
+            "zh": "这一程，坐船出海",
+            "ja": "船に乗って海へ",
+            "ko": "배를 타고 바다로"
           },
           "title": {
-            "zh": "白沙",
-            "en": "White sand",
-            "ja": "白い砂",
-            "ko": "흰 모래"
+            "zh": "离岸",
+            "en": "Leaving shore",
+            "ja": "岸を離れて",
+            "ko": "해안을 떠나"
           },
-          "meta": "SABAH · MALAYSIA · 10",
-          "id": "assets/optimized/kota-kinabalu/kota-(22).jpg",
+          "meta": "SABAH · MALAYSIA · 07",
+          "id": "assets/optimized/kota-kinabalu/kota-(19).jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 954
+        },
+        {
+          "src": "assets/optimized/kota-kinabalu/kota-(11).jpg",
+          "alt": {
+            "en": "A passenger boat crossing bright blue water, with people visible on board",
+            "zh": "驶过海面的船",
+            "ja": "青い海を渡る船",
+            "ko": "푸른 바다를 건너는 배"
+          },
+          "title": {
+            "zh": "向海",
+            "en": "Seaward",
+            "ja": "海へ",
+            "ko": "바다로"
+          },
+          "meta": "SABAH · MALAYSIA · 03",
+          "id": "assets/optimized/kota-kinabalu/kota-(11).jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 954
+        },
+        {
+          "src": "assets/optimized/kota-kinabalu/kota-(3).jpg",
+          "alt": {
+            "en": "Driftwood against a quiet stretch of blue sea",
+            "zh": "浮木停在潮水之间",
+            "ja": "潮の合間に残る流木",
+            "ko": "밀물과 썰물 사이에 남은 나무"
+          },
+          "title": {
+            "zh": "潮间",
+            "en": "Between tides",
+            "ja": "潮のあいだ",
+            "ko": "밀물과 썰물 사이"
+          },
+          "meta": "SABAH · MALAYSIA · 01",
+          "id": "assets/optimized/kota-kinabalu/kota-(3).jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 954
         },
         {
           "src": "assets/optimized/kota-kinabalu/kota-(24).jpg",
@@ -640,7 +607,93 @@
           "meta": "SABAH · MALAYSIA · 11",
           "id": "assets/optimized/kota-kinabalu/kota-(24).jpg",
           "medium": "film",
-          "visible": true
+          "visible": true,
+          "width": 1440,
+          "height": 954
+        },
+        {
+          "src": "assets/optimized/kota-kinabalu/kota-(9).jpg",
+          "alt": {
+            "en": "A weathered wooden frame opening toward the sea",
+            "zh": "木框之外，海还很远",
+            "ja": "木枠の向こうに広がる海",
+            "ko": "나무틀 너머로 펼쳐진 바다"
+          },
+          "title": {
+            "zh": "框外",
+            "en": "Beyond the frame",
+            "ja": "枠の向こう",
+            "ko": "프레임 너머"
+          },
+          "meta": "SABAH · MALAYSIA · 02",
+          "id": "assets/optimized/kota-kinabalu/kota-(9).jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 954
+        },
+        {
+          "src": "assets/optimized/kota-kinabalu/kota-(12).jpg",
+          "alt": {
+            "en": "A red lifebuoy among beach chairs and wooden posts at the water’s edge",
+            "zh": "岸边的救生圈",
+            "ja": "海辺の救命浮環",
+            "ko": "해변의 구명환"
+          },
+          "title": {
+            "zh": "泊岸",
+            "en": "By the shore",
+            "ja": "岸辺",
+            "ko": "물가"
+          },
+          "meta": "SABAH · MALAYSIA · 04",
+          "id": "assets/optimized/kota-kinabalu/kota-(12).jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 954
+        },
+        {
+          "src": "assets/optimized/kota-kinabalu/kota-(21).jpg",
+          "alt": {
+            "en": "A wide beach with small boats in the distance",
+            "zh": "岸外的小船，让海岸显得更长",
+            "ja": "沖に浮かぶ小舟と長い浜辺",
+            "ko": "먼바다의 작은 배와 긴 해변"
+          },
+          "title": {
+            "zh": "近岸",
+            "en": "Offshore",
+            "ja": "沖合",
+            "ko": "앞바다"
+          },
+          "meta": "SABAH · MALAYSIA · 09",
+          "id": "assets/optimized/kota-kinabalu/kota-(21).jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 954
+        },
+        {
+          "src": "assets/optimized/kota-kinabalu/kota-(22).jpg",
+          "alt": {
+            "en": "Tall white clouds above a pale sandy beach and turquoise water",
+            "zh": "白沙上方的云",
+            "ja": "白い砂浜の上に広がる雲",
+            "ko": "흰 모래 위의 구름"
+          },
+          "title": {
+            "zh": "白沙",
+            "en": "White sand",
+            "ja": "白い砂",
+            "ko": "흰 모래"
+          },
+          "meta": "SABAH · MALAYSIA · 10",
+          "id": "assets/optimized/kota-kinabalu/kota-(22).jpg",
+          "medium": "film",
+          "visible": true,
+          "width": 1440,
+          "height": 954
         }
       ],
       "status": "published",
@@ -649,6 +702,16 @@
         "zh": "",
         "ja": "",
         "ko": ""
+      },
+      "galleryLayout": {
+        "mode": "rows",
+        "rowSizes": [
+          2,
+          2,
+          3,
+          2,
+          2
+        ]
       }
     },
     {
